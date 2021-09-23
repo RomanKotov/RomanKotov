@@ -9,7 +9,7 @@
     }
     background: $background-color;
   }
-  code div[class^="line-"] {
-    white-space: pre-wrap;
+  code[data-lang]::before {
+    top: -20px !important;
   }
 }
