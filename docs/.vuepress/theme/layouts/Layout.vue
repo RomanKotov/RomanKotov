@@ -61,6 +61,10 @@ export default {
             padding: 7.5px;
             border: 1px solid var(--c-text);
             border-radius: 5px;
+
+            &:hover {
+                border-color: currentColor;
+            }
         }
     }
 
