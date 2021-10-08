@@ -1,14 +1,24 @@
 ---
-layout: page
-title: Credits
 comments: false
+contributors: false
+lastUpdated: false
 ---
-I want to say thanks for help building this site to:
+
+# Credits
+
+I want to say thanks for help building of this site to:
+
+## Current version
+
+- [Node.js](https://nodejs.org)
+- [Vuepress](https://v2.vuepress.vuejs.org/)
+
+## Previous version
 
 - [Ruby](https://www.ruby-lang.org)
 - [Jekyll](https://jekyllrb.com) for nice and fast experience for getting started.
 - [Github](https://github.com) for hosting a site, as well as a source code for it.
-- [Jekyll minima theme](https://github.com/jekyll/minima) as a basis for this site.
+- [Jekyll minima theme](https://github.com/jekyll/minima) as initial theme.
 -  [Blog entry](https://www.bytedude.com/jekyll-syntax-highlighting-and-line-numbers/) of Marcin swieczkowski about syntax highlighting. And also his [repository](https://github.com/m-cat/bytedude.com/blob/master/_sass/minutia/_syntax-highlighting.scss) as a source of inspiration. I am also grateful for his [syntax highlighting theme](https://github.com/m-cat/nimbus-pygments).
 - [Noir Jekyll theme](https://noir.essentialenemy.com/) for another part of inspiration about syntax highlighting.
 - [Github action for deploying a custom jekyll site](https://github.com/marketplace/actions/jekyll-4-build-deploy). It has helped to configure my own action after some trials.

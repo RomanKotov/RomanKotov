@@ -2,22 +2,20 @@
 
 set -e
 
-DEST="${JEKYLL_DESTINATION:-_site}"
 REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 BRANCH="gh-pages"
 
-echo "Installing gems..."
+echo "Installing dependencies..."
 
-bundle config path vendor/bundle
-bundle install --jobs 4 --retry 3
+npm install
 
-echo "Building Jekyll site..."
+echo "Building site..."
 
-JEKYLL_ENV=production bundle exec jekyll build
+npm run docs:build
 
 echo "Publishing..."
 
-cd ${DEST}
+cd docs/.vuepress/dist/
 
 git init
 git config user.name "${GITHUB_ACTOR}"

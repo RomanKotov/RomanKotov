@@ -1,5 +1,5 @@
-name: Jekyll 4 Build & Deploy
-description: 'Builds & deploys a Jekyll 4.x site to gh-pages branch of the same repository.'
+name: Build blog
+description: 'Builds & deploys a blog to gh-pages branch of the same repository.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

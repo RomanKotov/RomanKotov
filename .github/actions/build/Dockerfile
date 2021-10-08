@@ -1,7 +1,4 @@
-FROM ruby:2.7
-
-# install a modern bundler version
-RUN gem install bundler
+FROM node:lts
 
 ADD entrypoint.sh /entrypoint.sh
 

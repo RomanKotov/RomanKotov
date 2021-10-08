@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Roman Kotov's site",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@vuepress/plugin-debug": "^2.0.0-beta.26",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.26",
+    "@vuepress/plugin-search": "^2.0.0-beta.26",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.26",
+    "vuepress-vite": "^2.0.0-beta.26"
+  },
+  "scripts": {
+    "docs:debug-cli": "node inspect ./node_modules/.bin/vuepress-vite dev docs",
+    "docs:debug-web": "node --inspect ./node_modules/.bin/vuepress-vite dev docs",
+    "docs:dev": "vuepress-vite dev docs",
+    "docs:build": "vuepress-vite build docs"
+  },
+  "author": "Roman Kotov",
+  "license": "CC-BY-4.0"
+}
