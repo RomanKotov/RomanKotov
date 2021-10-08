@@ -19,6 +19,47 @@ const sortedLinks = (array) => [...array].sort(
 
 module.exports = {
   name: "plugin",
+  extendsPageOptions: ({ filePath }, app) => {
+    if (!filePath) {
+      return {};
+    }
+
+    const pageSlug = utils.path.basename(filePath, ".md");
+    if (pageSlug === "index") {
+      return {};
+    }
+
+    const commentsFolder = utils.path.join(
+      app.dir.source(),
+      "..",
+      "_data",
+      "comments",
+      pageSlug,
+    )
+
+    let comments = [];
+
+    const pageHasComments = (
+      utils.fs.existsSync(commentsFolder) &&
+        utils.fs.lstatSync(commentsFolder).isDirectory()
+    );
+    if (pageHasComments) {
+      comments = utils.fs.readdirSync(commentsFolder).filter(
+        (filename) => filename.endsWith(".json")
+      ).map(
+        (filename) => utils.path.join(commentsFolder, filename)
+      ).map(
+        (path) => utils.fs.readJSONSync(path)
+      );
+    }
+
+    return {
+      frontmatter: {
+        pageSlug,
+        comments,
+      }
+    }
+  },
   onInitialized: (app) => {
     const navbarLinks = (
       app.pages
