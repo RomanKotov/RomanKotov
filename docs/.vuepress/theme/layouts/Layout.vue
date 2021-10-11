@@ -4,6 +4,11 @@
     <div class="my-footer">
       <ul class="social-media-list">
         <li>
+          <a rel="me" href="mailto:roman@romankotov.com" title="RomanKotov">
+            <svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#email"></use></svg>
+          </a>
+        </li>
+        <li>
           <a rel="me" href="https://github.com/RomanKotov" title="RomanKotov">
             <svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>
           </a>
@@ -73,7 +78,7 @@ export default {
         height: 16px;
         display: inline-block;
         fill: var(--c-text);
-        padding: 5px 3px 2px 5px;
+        padding: 5px 5px 2px 5px;
         vertical-align: text-bottom;
     }
 }
