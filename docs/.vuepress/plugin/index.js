@@ -5,6 +5,14 @@ const pagesToExclude = new Set([
   "/404.html"
 ]);
 
+const SLUG_REGEXES = [
+  ".*\/\\d{4}-\\d{2}-\\d{2}-(?<date>[-\\w]\+).md$",
+  ".*\/(?<group>[-\\w]\+)\/index.md$",
+  ".*\/(?<filename>[-\\w]\+).md$",
+]
+
+const PAGE_SLUG_REGEX = new RegExp(`${SLUG_REGEXES.join("|")}`);
+
 const compareString = (a, b) => a.localeCompare(b)
 
 const sortedLinks = (array) => [...array].sort(
@@ -17,6 +25,11 @@ const sortedLinks = (array) => [...array].sort(
   }
 )
 
+const extractPageSlug = (name) => {
+  const groups = PAGE_SLUG_REGEX.exec(name)?.groups || {};
+  return groups['date'] || groups['group'] || groups['filename'];
+}
+
 module.exports = {
   name: "plugin",
   extendsPageOptions: ({ filePath }, app) => {
@@ -24,10 +37,9 @@ module.exports = {
       return {};
     }
 
-    const pageSlug = utils.path.basename(filePath, ".md");
-    if (pageSlug === "index") {
-      return {};
-    }
+    const localPath = filePath.replace(app.dir.source(), "");
+
+    const pageSlug = extractPageSlug(localPath);
 
     const commentsFolder = utils.path.join(
       app.dir.source(),
