@@ -1,6 +1,5 @@
 ---
 comments: false
-contributors: false
 lastUpdated: false
 ---
 

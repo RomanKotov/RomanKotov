@@ -66,6 +66,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: "/assets/favicon_io/favicon-32x32.png",
     navbar: [],
+    contributors: false,
   },
   plugins: [
     ['@vuepress/plugin-debug'],
