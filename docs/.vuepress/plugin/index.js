@@ -30,6 +30,38 @@ const extractPageSlug = (name) => {
   return groups['date'] || groups['group'] || groups['filename'];
 }
 
+const siteUrl = (path) => utils.path.join("https://romankotov.com", path)
+
+const extendPageHead = (page, app) => {
+  const pageData = {
+    author: "Roman Kotov",
+    title: page.title || app.options.title,
+    description: page.description || app.options.description,
+    type: "article",
+    url: siteUrl(page.path),
+    image: siteUrl("/assets/favicon_io/android-chrome-512x512.png"),
+  };
+
+  const ogData = (property, key) => [
+    "meta",
+    {
+      property,
+      prefix: "og: http://ogp.me/ns#",
+      content: pageData[key],
+    },
+  ];
+
+  return [
+    ogData("og:title", "title"),
+    ogData("twitter:title", "title"),
+    ogData("og:type", "type"),
+    ogData("og:url", "url"),
+    ogData("og:description", "description"),
+    ogData("og:image", "image"),
+    ogData("og:article:author", "author"),
+  ];
+}
+
 module.exports = {
   name: "plugin",
   extendsPageOptions: ({ filePath }, app) => {
@@ -71,6 +103,10 @@ module.exports = {
         comments,
       }
     }
+  },
+  extendsPageData: (page, app) => {
+    const head = extendPageHead(page, app);
+    return { frontmatter: { head } };
   },
   onInitialized: (app) => {
     const navbarLinks = (
