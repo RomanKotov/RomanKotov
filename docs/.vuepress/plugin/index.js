@@ -106,7 +106,15 @@ module.exports = {
   },
   extendsPageData: (page, app) => {
     const head = extendPageHead(page, app);
-    return { frontmatter: { head } };
+    return {
+      frontmatter: {
+        ...page.frontmatter,
+        head: [
+          ...(page.frontmatter.head || []),
+          ...head,
+        ],
+      }
+    };
   },
   onInitialized: (app) => {
     const navbarLinks = (
