@@ -39,7 +39,7 @@ const extendPageHead = (page, app) => {
     description: page.description || app.options.description,
     type: "article",
     url: siteUrl(page.path),
-    image: siteUrl("/assets/favicon_io/android-chrome-512x512.png"),
+    image: "/assets/favicon_io/android-chrome-512x512.png",
   };
 
   const ogData = (property, key) => [
