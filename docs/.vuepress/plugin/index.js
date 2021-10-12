@@ -59,6 +59,23 @@ const extendPageHead = (page, app) => {
     ogData("og:description", "description"),
     ogData("og:image", "image"),
     ogData("og:article:author", "author"),
+    [
+      "script",
+      {
+        type: "application/ld+json",
+      },
+      JSON.stringify({
+        "author": {
+          "@type": "Person",
+          "name": pageData["author"],
+        },
+        "description": pageData["description"],
+        "headline": pageData["title"],
+        "url": pageData["url"],
+        "@type": pageData["type"],
+        "@context": "https://schema.org"
+      })
+    ],
   ];
 }
 
