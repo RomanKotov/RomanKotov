@@ -1,6 +1,7 @@
 <template>
 <Layout>
   <template #page-bottom>
+    <Comments></Comments>
     <div class="my-footer">
       <ul class="social-media-list">
         <li>
@@ -38,13 +39,15 @@
 </template>
 
 <script>
-import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import Layout from "@vuepress/theme-default/lib/client/layouts/Layout.vue";
+import Comments from "../components/Comments.vue";
 
 export default {
     components: {
         Layout,
+        Comments,
     },
-}
+};
 </script>
 
 <style lang="scss">
