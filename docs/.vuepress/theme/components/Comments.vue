@@ -11,3 +11,10 @@ import type { DefaultThemePageFrontmatter } from "@vuepress/theme-default/shared
 const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>();
 const shouldShowComments = computed(() => frontmatter.value.comments === true);
 </script>
+
+<style lang="scss">
+.giscus {
+  width: 98%;
+  margin: 0 auto;
+}
+</style>
