@@ -1,6 +1,7 @@
 <template>
   <section v-if="shouldShowComments">
     <Giscus
+      :key="theme"
       repo="RomanKotov/RomanKotov"
       repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
       category="General"
