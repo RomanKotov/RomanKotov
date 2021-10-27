@@ -7,3 +7,7 @@ $MQMobileNarrow: 419px !default;
 $codeLang: 'c' 'cpp' 'cs' 'css' 'dart' 'docker' 'elixir' 'fs' 'go' 'html' 'java'
   'js' 'json' 'kt' 'less' 'makefile' 'md' 'php' 'py' 'rb' 'rs' 'sass' 'scss' 'sh'
   'styl' 'ts' 'toml' 'vue' 'yml' !default;
+
+div[class*="language-"].line-numbers-mode .line-numbers {
+  line-height: 1.4205;
+}
