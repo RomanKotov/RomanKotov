@@ -75,7 +75,7 @@ const extendPageHead = (page, app) => {
         "data-repo-id": "MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ=",
         "data-category": "General",
         "data-category-id": "DIC_kwDOD46OyM4B_mWS",
-        "data-mapping": "title",
+        "data-mapping": "og:title",
         "data-reactions-enabled": "1",
         "data-emit-metadata": "0",
         "data-theme": "preferred_color_scheme",
