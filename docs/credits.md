@@ -10,6 +10,7 @@ I want to say thanks for help building of this site to:
 
 - [Node.js](https://nodejs.org)
 - [Vuepress](https://v2.vuepress.vuejs.org/)
+- [Giscus](https://giscus.app)
 
 ## Previous version
 
