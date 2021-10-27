@@ -5,14 +5,6 @@ const pagesToExclude = new Set([
   "/404.html"
 ]);
 
-const SLUG_REGEXES = [
-  ".*\/\\d{4}-\\d{2}-\\d{2}-(?<date>[-\\w]\+).md$",
-  ".*\/(?<group>[-\\w]\+)\/index.md$",
-  ".*\/(?<filename>[-\\w]\+).md$",
-]
-
-const PAGE_SLUG_REGEX = new RegExp(`${SLUG_REGEXES.join("|")}`);
-
 const compareString = (a, b) => a.localeCompare(b)
 
 const sortedLinks = (array) => [...array].sort(
@@ -24,11 +16,6 @@ const sortedLinks = (array) => [...array].sort(
     return -compareString(a.date, b.date);
   }
 )
-
-const extractPageSlug = (name) => {
-  const groups = PAGE_SLUG_REGEX.exec(name)?.groups || {};
-  return groups['date'] || groups['group'] || groups['filename'];
-}
 
 const siteUrl = (path) => utils.path.join("https://romankotov.com", path)
 
@@ -51,7 +38,7 @@ const extendPageHead = (page, app) => {
     },
   ];
 
-  return [
+  const result = [
     ogData("og:title", "title"),
     ogData("twitter:title", "title"),
     ogData("og:type", "type"),
@@ -77,50 +64,31 @@ const extendPageHead = (page, app) => {
       })
     ],
   ];
+
+  if (page?.frontmatter?.comments === true) {
+    result.push([
+      "script",
+      {
+        src: "https://giscus.app/client.js",
+        crossorigin: "anonymous",
+        "data-repo": "RomanKotov/RomanKotov",
+        "data-repo-id": "MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ=",
+        "data-category": "General",
+        "data-category-id": "DIC_kwDOD46OyM4B_mWS",
+        "data-mapping": "title",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-theme": "preferred_color_scheme",
+        "data-lang": "en",
+        async: true,
+      },
+    ])
+  }
+  return result;
 }
 
 module.exports = {
   name: "plugin",
-  extendsPageOptions: ({ filePath }, app) => {
-    if (!filePath) {
-      return {};
-    }
-
-    const localPath = filePath.replace(app.dir.source(), "");
-
-    const pageSlug = extractPageSlug(localPath);
-
-    const commentsFolder = utils.path.join(
-      app.dir.source(),
-      "..",
-      "_data",
-      "comments",
-      pageSlug,
-    )
-
-    let comments = [];
-
-    const pageHasComments = (
-      utils.fs.existsSync(commentsFolder) &&
-        utils.fs.lstatSync(commentsFolder).isDirectory()
-    );
-    if (pageHasComments) {
-      comments = utils.fs.readdirSync(commentsFolder).filter(
-        (filename) => filename.endsWith(".json")
-      ).map(
-        (filename) => utils.path.join(commentsFolder, filename)
-      ).map(
-        (path) => utils.fs.readJSONSync(path)
-      );
-    }
-
-    return {
-      frontmatter: {
-        pageSlug,
-        comments,
-      }
-    }
-  },
   extendsPageData: (page, app) => {
     const head = extendPageHead(page, app);
     return {
