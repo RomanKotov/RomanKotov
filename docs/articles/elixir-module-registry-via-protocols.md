@@ -5,7 +5,7 @@ date: '2021-10-27 13:07:35 +0300'
 
 # Elixir module registry via Protocols
 
-The core idea of this article is that elixir protocols have a very interesting [introspection feature](https://hexdocs.pm/elixir/1.12/Protocol.html#module-reflection):
+The core idea of this article is that elixir protocols have a very interesting [reflection feature](https://hexdocs.pm/elixir/1.12/Protocol.html#module-reflection):
 
 ```elixir
 SomeProtocol.__protocol__(:impls)
