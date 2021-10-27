@@ -26,6 +26,7 @@ const extendPageHead = (page, app) => {
     description: page.description || app.options.description,
     type: "article",
     url: siteUrl(page.path),
+    twitterCard: "summary",
     image: "/assets/favicon_io/android-chrome-512x512.png",
   };
 
@@ -41,10 +42,12 @@ const extendPageHead = (page, app) => {
   return [
     ogData("og:title", "title"),
     ogData("twitter:title", "title"),
+    ogData("twitter:card", "twitterCard"),
     ogData("og:type", "type"),
     ogData("og:url", "url"),
     ogData("og:description", "description"),
     ogData("og:image", "image"),
+    ogData("twitter:image", "image"),
     ogData("og:article:author", "author"),
     [
       "script",
