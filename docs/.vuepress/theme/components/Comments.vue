@@ -12,10 +12,14 @@
       mapping="og:title"
       reactionsEnabled="1"
 <<<<<<< HEAD
+<<<<<<< HEAD
       :theme="theme"
 =======
       theme="preferred_color_scheme"
 >>>>>>> 0dfac30... Use giscus vue integration
+=======
+      :theme="theme"
+>>>>>>> fd335a1... Workaround for comments dark mode
       lang="en"
       emitMetadata="0"
     />
