@@ -1,14 +1,21 @@
 <template>
   <section v-if="shouldShowComments">
     <Giscus
+<<<<<<< HEAD
       :key="theme"
+=======
+>>>>>>> 0dfac30... Use giscus vue integration
       repo="RomanKotov/RomanKotov"
       repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
       category="General"
       categoryId="DIC_kwDOD46OyM4B_mWS"
       mapping="og:title"
       reactionsEnabled="1"
+<<<<<<< HEAD
       :theme="theme"
+=======
+      theme="preferred_color_scheme"
+>>>>>>> 0dfac30... Use giscus vue integration
       lang="en"
       emitMetadata="0"
     />
