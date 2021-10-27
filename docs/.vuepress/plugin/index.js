@@ -38,7 +38,7 @@ const extendPageHead = (page, app) => {
     },
   ];
 
-  const result = [
+  return [
     ogData("og:title", "title"),
     ogData("twitter:title", "title"),
     ogData("og:type", "type"),
@@ -64,27 +64,6 @@ const extendPageHead = (page, app) => {
       })
     ],
   ];
-
-  if (page?.frontmatter?.comments === true) {
-    result.push([
-      "script",
-      {
-        src: "https://giscus.app/client.js",
-        crossorigin: "anonymous",
-        "data-repo": "RomanKotov/RomanKotov",
-        "data-repo-id": "MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ=",
-        "data-category": "General",
-        "data-category-id": "DIC_kwDOD46OyM4B_mWS",
-        "data-mapping": "og:title",
-        "data-reactions-enabled": "1",
-        "data-emit-metadata": "0",
-        "data-theme": "preferred_color_scheme",
-        "data-lang": "en",
-        async: true,
-      },
-    ])
-  }
-  return result;
 }
 
 module.exports = {

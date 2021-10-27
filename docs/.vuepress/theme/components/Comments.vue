@@ -1,9 +1,21 @@
 <template>
-<section v-if="shouldShowComments" class="giscus">
-</section>
+  <section v-if="shouldShowComments">
+    <Giscus
+      repo="RomanKotov/RomanKotov"
+      repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
+      category="General"
+      categoryId="DIC_kwDOD46OyM4B_mWS"
+      mapping="og:title"
+      reactionsEnabled="1"
+      theme="preferred_color_scheme"
+      lang="en"
+      emitMetadata="0"
+    />
+  </section>
 </template>
 
 <script setup lang="ts">
+import { Giscus } from '@giscus/vue';
 import { usePageFrontmatter } from "@vuepress/client";
 import { computed } from "vue";
 import type { DefaultThemePageFrontmatter } from "@vuepress/theme-default/shared";
