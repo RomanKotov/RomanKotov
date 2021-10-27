@@ -8,6 +8,14 @@ $codeLang: 'c' 'cpp' 'cs' 'css' 'dart' 'docker' 'elixir' 'fs' 'go' 'html' 'java'
   'js' 'json' 'kt' 'less' 'makefile' 'md' 'php' 'py' 'rb' 'rs' 'sass' 'scss' 'sh'
   'styl' 'ts' 'toml' 'vue' 'yml' !default;
 
-div[class*="language-"].line-numbers-mode .line-numbers {
-  line-height: 1.4205;
+.theme-default-content {
+  pre,
+  pre[class*='language-'] {
+    text-size-adjust: 100%;
+    line-height: 1.4rem;
+
+    code {
+      display: table-cell;
+    }
+  }
 }
