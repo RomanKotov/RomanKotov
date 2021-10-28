@@ -26,7 +26,7 @@ const extendPageHead = (page, app) => {
     description: page.description || app.options.description,
     type: "article",
     url: siteUrl(page.path),
-    twitterCard: "summary",
+    twitterCard: "summary_large_image",
     twitterCreator: "@kotovr",
     image: "/assets/favicon_io/android-chrome-512x512.png",
     twitterImage: siteUrl("/assets/favicon_io/android-chrome-512x512.png"),
