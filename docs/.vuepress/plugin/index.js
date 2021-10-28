@@ -28,8 +28,7 @@ const extendPageHead = (page, app) => {
     url: siteUrl(page.path),
     twitterCard: "summary_large_image",
     twitterCreator: "@kotovr",
-    image: "/assets/favicon_io/android-chrome-512x512.png",
-    twitterImage: siteUrl("/assets/favicon_io/android-chrome-512x512.png"),
+    image: siteUrl("/assets/favicon_io/android-chrome-512x512.png"),
   };
 
   const ogData = (property, key) => [
@@ -50,7 +49,7 @@ const extendPageHead = (page, app) => {
     ogData("og:url", "url"),
     ogData("og:description", "description"),
     ogData("og:image", "image"),
-    ogData("twitter:image", "twitterImage"),
+    ogData("twitter:image", "image"),
     ogData("og:article:author", "author"),
     [
       "script",
