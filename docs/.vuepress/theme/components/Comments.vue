@@ -1,5 +1,6 @@
 <template>
   <Giscus
+    :key="theme"
     v-if="shouldShowComments"
     repo="RomanKotov/RomanKotov"
     repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
