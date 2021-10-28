@@ -1,18 +1,16 @@
 <template>
-  <section v-if="shouldShowComments">
-    <Giscus
-      :key="theme"
-      repo="RomanKotov/RomanKotov"
-      repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
-      category="General"
-      categoryId="DIC_kwDOD46OyM4B_mWS"
-      mapping="og:title"
-      reactionsEnabled="1"
-      :theme="theme"
-      lang="en"
-      emitMetadata="0"
-    />
-  </section>
+  <Giscus
+    v-if="shouldShowComments"
+    repo="RomanKotov/RomanKotov"
+    repoId="MDEwOlJlcG9zaXRvcnkyNjEwMDA5MDQ="
+    category="General"
+    categoryId="DIC_kwDOD46OyM4B_mWS"
+    mapping="og:title"
+    reactionsEnabled="1"
+    :theme="theme"
+    lang="en"
+    emitMetadata="0"
+  />
 </template>
 
 <script setup lang="ts">
