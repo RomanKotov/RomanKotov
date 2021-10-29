@@ -17,7 +17,7 @@ const sortedLinks = (array) => [...array].sort(
   }
 )
 
-const siteUrl = (path) => utils.path.join("https://romankotov.com", path)
+const siteUrl = (path) => new URL(path, "https://romankotov.com/").href;
 
 const extendPageHead = (page, app) => {
   const pageData = {
