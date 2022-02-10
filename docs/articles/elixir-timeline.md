@@ -107,7 +107,7 @@
 
 ## Testing
 
-## Property based testing
+### Property based testing
 - Stream data initial commit - May 11, 2017 [Github](https://github.com/whatyouhide/stream_data/commit/e2802712565d4c082ec2820f87c6ff98ea1b435d)
 - Article - October 31, 2017 [Elixir site](https://elixir-lang.org/blog/2017/10/31/stream-data-property-based-testing-and-data-generation-for-elixir/)
 
