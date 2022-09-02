@@ -1,0 +1,1 @@
+import{o,c as e,a as t,b as a}from"./app.f80e3e6e.js";import{_ as s}from"./plugin-vue_export-helper.5a098b48.js";const r={},c={id:"roman-kotov-s-blog",tabindex:"-1"},n=t("a",{class:"header-anchor",href:"#roman-kotov-s-blog","aria-hidden":"true"},"#",-1),_=a(" Roman Kotov's blog"),d=[n,_];function i(h,m){return o(),e("h1",c,d)}var x=s(r,[["render",i]]);export{x as default};
