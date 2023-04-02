@@ -1,5 +1,0 @@
-name: Build blog
-description: 'Builds & deploys a blog to gh-pages branch of the same repository.'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
