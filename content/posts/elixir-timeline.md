@@ -9,6 +9,7 @@ tags: ["Elixir"]
 categories: ["Elixir"]
 aliases: ['/articles/elixir-timeline.html']
 draft: false
+summary: "How I remember history of Elixir."
 ---
 
 ## Communities

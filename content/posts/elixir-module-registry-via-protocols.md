@@ -8,6 +8,7 @@ author: "Roman Kotov"
 authorLink: "https://romankotov.com"
 description: "Example how to create module registry in Elixir"
 aliases: ['/articles/elixir-module-registry-via-protocols.html']
+summary: "Example how to create module registry in Elixir."
 ---
 
 The core idea of this article is that elixir protocols have a very interesting [reflection feature](https://hexdocs.pm/elixir/1.12/Protocol.html#module-reflection):
@@ -311,7 +312,7 @@ end
 
 defmodule DefimplExample.StructImplementation do
   defstruct [:some_attribute]
-  
+
   defimpl DefimplExample.Protocol do
     def some_method(_), do: :ok
   end
@@ -450,7 +451,7 @@ defmodule Tagged do
     {:ok, modules} = :application.get_key(Application.get_application(__MODULE__), :modules)
     Enum.filter(modules, &is_tagged/1)
   end
-  
+
   defp is_tagged(mod) do
     :attributes
     |> mod.__info__()
@@ -467,7 +468,7 @@ The idea here is to create a mapping in runtime, and to cache it with something 
 
 - [Registry](https://hexdocs.pm/elixir/1.12/Registry.html)
 - [ETS](https://elixir-lang.org/getting-started/mix-otp/ets.html) or [DETS](https://erlang.org/doc/man/dets.html)
-- [mnesia](https://erlang.org/doc/man/mnesia.html) 
+- [mnesia](https://erlang.org/doc/man/mnesia.html)
 - [GenServer](https://hexdocs.pm/elixir/1.12/GenServer.html)
 - [Agent](https://hexdocs.pm/elixir/1.12/Agent.html)
 - [Application get_env](https://hexdocs.pm/elixir/1.12/Application.html#get_env/3) or their runtime analogs. [This approach is not recommended for libraries](https://hexdocs.pm/elixir/master/library-guidelines.html#avoid-compile-time-application-configuration).
