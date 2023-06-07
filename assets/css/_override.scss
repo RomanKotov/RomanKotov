@@ -1,0 +1,21 @@
+figure.aside {
+  width: 35%;
+
+  @media (min-width: 500px) {
+    width: 20%;
+  }
+
+  & + p::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  &.left {
+    float: left;
+  }
+
+  &.right {
+    float: right;
+  }
+}
