@@ -19,3 +19,8 @@ figure.aside {
     float: right;
   }
 }
+
+*:target {
+  background-color: rgba(215, 215, 0, 0.2);
+  border-radius: 10%;
+}
