@@ -20,6 +20,15 @@ figure.aside {
   }
 }
 
+.figure.avatar {
+  img {
+    float: right;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+  }
+}
+
 *:target {
   background-color: rgba(215, 215, 0, 0.2);
   border-radius: 10%;

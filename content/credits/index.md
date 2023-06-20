@@ -11,6 +11,7 @@ I want to say thanks for help building of this site to:
 ## Current version
 - [Hugo](https://gohugo.io)
 - [LoveIt Hugo Theme](https://hugoloveit.com)
+- [Vectornator](https://www.vectornator.io)
 
 ## Previous versions
 
