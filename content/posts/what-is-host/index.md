@@ -539,9 +539,9 @@ Oficially you can not connect to the port `0`.
 
 If the application needs a random port, it can rent port `0`.
 The post office allows to rent it, but not to connect to it.
-When the application rents port `0`, the post office finds a random one, for example `465142`.
+When the application rents port `0`, the post office finds a random one, for example `46514`.
 Then it creates a contract for this port.
-The application then starts to listen on `465142` port, though asked for `0`.
+The application then starts to listen on `46514` port, though asked for `0`.
 
 When application rents port `0`, it may be difficult for others to find it.
 I have used this feature in tests.
