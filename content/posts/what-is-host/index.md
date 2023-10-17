@@ -188,7 +188,7 @@ To discover a MAC address, a post office manager looks out of the portal and sho
 If another citizen hears own IP address, it shouts own MAC address.
 After it they become aquainted and write contact data to a special table.
 Now they know how to reach each other inside the city.
-They will use their their tables instead of shouting the next time.
+They will use their tables instead of shouting the next time.
 This process is called Address Resolution Protocol, or ARP[^ARP].
 
 {{< figure src="bullhorn.svg" alt="Employee looks out of the door and shouts in bullhorn." >}}
