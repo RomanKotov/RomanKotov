@@ -33,7 +33,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # Author config
 [author]
   name = "Roman Kotov"
-  email = "roman@romankotov.com"
+  email = "rkotov.me@gmail.com"
   link = "https://romankotov.com"
 
 # Menu config
@@ -304,7 +304,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     HackTheBox = ""
     RootMe= ""
     Phone = ""
-    Email = "roman@romankotov.com"
+    Email = "rkotov.me@gmail.com"
     RSS = true # LoveIt NEW | 0.2.0
 
   # LoveIt CHANGED | 0.2.0 Page global config
