@@ -5,7 +5,7 @@ creation_date: '2023-10-28 13:49:00 +0300'
 tags: ["programming", "basics", "elixir"]
 categories: ["Basics"]
 draft: false
-featuredImage: "images/featured-image.png"
+featuredImage: "featured-image.png"
 description: "Core ideas behind programming patterns"
 summary: "Programming patterns allow to write applications faster. This post tries to explain core idea of each pattern."
 ---
