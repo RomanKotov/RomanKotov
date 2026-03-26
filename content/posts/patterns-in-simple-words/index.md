@@ -67,7 +67,7 @@ They refuse to work with wrong interfaces and check everything before you can st
 
 Some languages are less strict.
 They do not care if you define the whole interface.
-They care only if you have specific method they try to call, and check this after the program is already started.nn
+They care only if you have specific method they try to call, and check this after the program is already started.
 Usually we call this "duck typing" - "when it walks like a duck, and speaks like a duck, then it must be a duck".
 
 ## Mutable vs Immutable structures (OOP vs FP)
@@ -357,7 +357,7 @@ You can split operation into multiple steps.
 For example you build an ORM library and want to allow user to prepare a request.
 Another example is a library with lazy evalutaion.
 The user may add many operations before getting a result.
-You you delay their execution until user is happy with a configuration.
+You delay their execution until user is happy with a configuration.
 
 **How**:
 The code consists from 3 parts
@@ -409,7 +409,7 @@ Here are some examples for this idea.
 
 You can find it in DOM event handlers in browser.
 When user clicks a button, browser emits "click" event.
-If button does is unable to handle it, browser asks button's parent to do it.
+If button is not able to handle it, browser asks button's parent to do it.
 The "click" event bubbles through parents until some element handles it.
 The event is ignored if no one processed it.
 By the way, many elements may process the same event.
